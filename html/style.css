@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    user-select: none;
+    background-color: transparent !important;
+    font-family: "Oswald", sans-serif;
+    /* Using a GTA–inspired font */
+    font-style: normal;
+    font-optical-sizing: auto;
+}
+
+::-webkit-scrollbar {
+    width: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+/* Main container with a dark background at lower opacity */
+#mainDiv {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('data:image/svg+xml,<svg width="515" height="1080" viewBox="0 0 515 1080" xmlns="http://www.w3.org/2000/svg"><rect width="0" height="0" fill="url(%23fadeVertical)"/><rect width="100" height="1080" fill="url(%23fadeHorizontal)"/><rect width="515" height="1080" fill="url(%23fadeEdges)"/><defs><linearGradient id="fadeVertical" x1="257.5" y1="0" x2="257.5" y2="1080" gradientUnits="userSpaceOnUse"><stop offset="0" stop-opacity="0"/><stop offset="0.15" stop-opacity="0.0"/><stop offset="0.35" stop-opacity="0"/><stop offset="0.65" stop-opacity="1"/><stop offset="0.85" stop-opacity="0.0"/><stop offset="0" stop-opacity="0"/></linearGradient><linearGradient id="fadeHorizontal" x1="0" y1="540" x2="515" y2="540" gradientUnits="userSpaceOnUse"><stop offset="0" stop-opacity="0"/><stop offset="0.15" stop-opacity="0.0"/><stop offset="0.35" stop-opacity="0"/><stop offset="0.65" stop-opacity="0"/><stop offset="0.85" stop-opacity="0.0"/><stop offset="1" stop-opacity="0"/></linearGradient><radialGradient id="fadeEdges" cx="50%" cy="50%" r="65%" fx="50%" fy="50%" gradientUnits="userSpaceOnUse"><stop offset="50%" stop-opacity="1"/><stop offset="100%" stop-opacity="0"/></radialGradient></defs></svg>');
+}
+
+#MDTopLeftLine {
+    width: 100%;
+    height: 4%;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.08);
+    transform: rotate(-29.692deg);
+    z-index: 1;
+}
+
+#MDTopEffect {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    background: rgba(136, 136, 136, 0.15);
+    filter: blur(166.5px);
+    top: -26%;
+    left: -37%;
+    z-index: 1;
+}
+
+#MDBottomEffect {
+    width: 80%;
+    height: 70%;
+    position: absolute;
+    background: rgba(136, 136, 136, 0.15);
+    filter: blur(166.5px);
+    bottom: -65%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1;
+}
+
+/* Header Section */
+#MDDivType1 {
+    z-index: 2;
+    width: 84%;
+    height: 8%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#MDDivType1Inside {
+    height: 30%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 0.5vw;
+}
+
+#MDDivType1InsideTextDiv {
+    padding-top: 0.25vw;
+    width: 78%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    color: #FFF;
+    font-size: 1.2vw;
+    line-height: 1vw;
+}
+
+#MDDivType1InsideTextDiv h4 {
+    font-weight: 900;
+}
+
+#MDDivType1InsideTextDiv span {
+    font-weight: 400;
+}
+
+#MDDivType1InsideCloseLeft {
+    width: 50%;
+    height: 90%;
+    position: relative;
+    border-radius: 4px 0 0 4px;
+    border: 2px solid #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    font-size: 0.8vw;
+    padding-left: 0.1vw;
+}
+#MDDivType1InsideCloseLeft:hover {
+    transition: 200ms ease-in-out;
+    cursor: pointer;
+    border: 2px solid rgba(170,170,170,0.8);
+    background: rgba(170,170,170,0.35);
+}
+
+#MDDivType1InsideCloseRight {
+    width: 50%;
+    height: 90%;
+    position: relative;
+    background: #FFF;
+    border: 2px solid #FFF;
+    border-radius: 0 4px 4px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.9vw;
+}
+
+/* Content Section (transparent background removed) */
+#MDDivType2 {
+    z-index: 2;
+    width: 86%;
+    height: 67%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    gap: 0.2vw;
+}
+
+/* Top bar in content */
+#MDDivType2TopDiv {
+    width: 90%;
+    height: 8%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#MDDivType2TopDivLeft {
+    width: 80%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    color: white;
+    gap: 0.5vw;
+}
+
+/* Bottom section inside content */
+#MDDivType2BottomDiv {
+    width: 90%;
+    height: 86%;
+    position: relative;
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    padding-bottom: 0.5vw;
+    gap: 1.3vw;
+}
+
+/* Target box with subtle white overlay */
+#MDDivType2BDTarget {
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    border-radius: 5px;
+    border: 2px solid rgba(255,255,255,0.08);
+    background: linear-gradient(180deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 100%);
+    gap: 0.6vw;
+}
+
+#MDDivType2BDTargetLine {
+    width: 0.55%;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.5);
+    position: relative;
+    display: flex;
+    padding-top: 0.45vw;
+    padding-bottom: 0.45vw;
+}
+
+#MDDivType2BDTextDiv {
+    width: 73%;
+    height: fit-content;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: #FFF;
+    font-weight: 600;
+    font-size: 0.8vw;
+    padding-top: 0.75vw;
+    padding-bottom: 0.75vw;
+    font-family: "Oswald", sans-serif;
+}
+
+#MDDivType2BDIconDiv {
+    width: 10%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: rgba(255,255,255,0.5);
+    font-size: 0.9vw;
+}
+
+/* "Me" box with subtle grey overlay */
+#MDDivType2BDMe {
+    width: 65%;
+    height: fit-content;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    border-radius: 5px;
+    border: 2px solid rgba(204,204,204,0.2);
+    background: linear-gradient(180deg, rgba(204,204,204,0.05) 0%, rgba(204,204,204,0.05) 100%);
+    gap: 0.1vw;
+}
+
+#MDDivType2BDMeTargetLine {
+    width: 0.55%;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.5);
+    position: relative;
+    display: flex;
+    padding-top: 0.45vw;
+    padding-bottom: 0.45vw;
+}
+
+#MDDivType2BDMeTextDiv {
+    width: 85%;
+    height: fit-content;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: #FFF;
+    font-weight: 600;
+    font-size: 0.8vw;
+    padding-top: 0.65vw;
+    padding-bottom: 0.65vw;
+    font-family: "Oswald", sans-serif;
+}
+
+/*===============================
+   BUTTONS CONTAINER (Section 3)
+================================*/
+
+/* Main buttons container (transparent border removed) */
+#MDDivType3 {
+    gap: 0.9vw 1vw;
+    z-index: 2;
+    width: 87%;
+    height: 16%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+/* Button styles – legacy icon containers hidden; text centered with GTA font */
+.MDDivType3Btn {
+    width: 42.5%;
+    height: 26%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 5.205px;
+}
+
+.MDDivType3BtnNumber {
+    display: none;
+}
+
+.MDDivType3Btn:hover {
+    transition: 200ms ease-in-out;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.MDDivType3BtnDefault {
+    border: 2px solid rgba(200, 200, 200, 0.2);
+    background: rgba(200, 200, 200, 0.1);
+}
+
+.MDDivType3BtnDefault .MDDivType3BtnText {
+    color: #CCC;
+}
+
+.MDDivType3BtnClicked {
+    color: #FFF;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.MDDivType3BtnClicked .MDDivType3BtnText {
+    color: #FFF;
+}
+
+/* Button text – centered and using GTA (Oswald) font */
+.MDDivType3BtnText {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.7vw;
+    font-family: "Oswald", sans-serif;
+}

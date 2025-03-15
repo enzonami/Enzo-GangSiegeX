@@ -1,0 +1,526 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    user-select: none;
+    background-color: transparent !important;
+    font-family: "Inter", sans-serif;
+    font-variation-settings: "slnt" -5;
+    font-style: normal;
+    font-optical-sizing: auto;
+    /* overflow: hidden; */
+}
+
+::-webkit-scrollbar {
+    width: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+/* Main container with no background */
+#mainDiv {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 28%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    /* Removed background-image and related properties */
+    background: none;
+}
+
+/* Removed pseudo-element for fade effect since there's no background */
+
+/* Top white line */
+#MDTopLeftLine {
+    width: 100%;
+    height: 4%;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.08);
+    transform: rotate(-29.692deg);
+    z-index: 1;
+}
+
+/* Top effect with subtle grey transparency */
+#MDTopEffect {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    background: rgba(136,136,136,0.15);
+    filter: blur(166.5px);
+    top: -26%;
+    left: -37%;
+    z-index: 1;
+}
+
+/* Bottom effect with subtle grey transparency */
+#MDBottomEffect {
+    width: 80%;
+    height: 70%;
+    position: absolute;
+    background: rgba(136,136,136,0.15);
+    filter: blur(166.5px);
+    bottom: -65%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1;
+}
+
+/* Header Section */
+#MDDivType1 {
+    z-index: 2;
+    width: 84%;
+    height: 8%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#MDDivType1Inside {
+    height: 30%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 0.5vw;
+}
+
+#MDDivType1InsideIconDiv {
+    width: 14%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    background: #FFF;
+    color: #000;
+    font-size: 1vw;
+    text-align: center;
+}
+
+#MDDivType1InsideTextDiv {
+    padding-top: 0.25vw;
+    width: 78%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    color: #FFF;
+    font-size: 1.2vw;
+    line-height: 1vw;
+}
+
+#MDDivType1InsideTextDiv h4 {
+    font-weight: 900;
+}
+
+#MDDivType1InsideTextDiv span {
+    font-weight: 400;
+}
+
+#MDDivType1InsideCloseLeft {
+    width: 50%;
+    height: 90%;
+    position: relative;
+    border-radius: 4px 0 0 4px;
+    border: 2px solid #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    font-size: 0.8vw;
+    padding-left: 0.1vw;
+}
+
+#MDDivType1InsideCloseLeft:hover {
+    transition: 200ms ease-in-out;
+    cursor: pointer;
+    border: 2px solid rgba(170,170,170,0.8);
+    background: rgba(170,170,170,0.35);
+}
+
+#MDDivType1InsideCloseRight {
+    width: 50%;
+    height: 90%;
+    position: relative;
+    background: #FFF;
+    border: 2px solid #FFF;
+    border-radius: 0 4px 4px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.9vw;
+}
+
+/* Content Section */
+#MDDivType2 {
+    z-index: 2;
+    width: 86%;
+    height: 67%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    gap: 0.2vw;
+    border: 2px solid rgba(255,255,255,0.1);
+    background: linear-gradient(180deg, rgba(128,128,128,0.05) 0%, rgba(128,128,128,0.05) 100%);
+}
+
+/* Top bar of content section */
+#MDDivType2TopDiv {
+    width: 90%;
+    height: 8%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#MDDivType2TopDivLeft {
+    width: 80%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    color: white;
+    gap: 0.5vw;
+}
+
+#MDDivType2TopDivLeft i {
+    color: #CCC;
+    font-size: 1vw;
+}
+
+#MDDivType2TopDivLeft h4 {
+    font-weight: 900;
+    font-size: 1.3vw;
+    padding-top: 0.1vw;
+}
+
+#MDDivType2TopDivLeft span {
+    font-weight: 400;
+}
+
+#MDDivType2TopDivRight {
+    width: 20%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row;
+    color: #CCC;
+    font-size: 1vw;
+    gap: 0.5vw;
+}
+
+.MDDivType2TopDivRightCircle {
+    width: 20.8%;
+    height: 30%;
+    border-radius: 50%;
+    border: 2px solid #CCC;
+    background: rgba(204,204,204,0.35);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.MDDivType2TopDivRightCircleActive {
+    background: #CCC;
+}
+
+.MDDivType2TopDivRightCircleActive:hover {
+    transition: 200ms ease-in-out;
+    cursor: pointer;
+    background: rgba(204,204,204,0.35);
+}
+
+.MDDivType2TopDivRightCircleDeactive {
+    background: rgba(204,204,204,0.35);
+}
+
+.MDDivType2TopDivRightCircleDeactive:hover {
+    transition: 200ms ease-in-out;
+    cursor: pointer;
+    background: #CCC;
+}
+
+/* Bottom part of content section */
+#MDDivType2BottomDiv {
+    width: 90%;
+    height: 86%;
+    position: relative;
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    padding-bottom: 0.5vw;
+    gap: 1.3vw;
+}
+
+#MDDivType2BDTarget {
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    border-radius: 5px;
+    border: 2px solid rgba(255,255,255,0.08);
+    background: linear-gradient(180deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 100%);
+    gap: 0.6vw;
+}
+
+#MDDivType2BDTargetLine {
+    width: 0.55%;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.5);
+    position: relative;
+    display: flex;
+    padding-top: 0.45vw;
+    padding-bottom: 0.45vw;
+}
+
+#MDDivType2BDTextDiv {
+    width: 73%;
+    height: fit-content;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: rgba(255,255,255,0.5);
+    font-weight: 600;
+    font-size: 0.8vw;
+    padding-top: 0.75vw;
+    padding-bottom: 0.75vw;
+    font-family: "Lato", sans-serif;
+    font-style: normal;
+}
+
+#MDDivType2BDIconDiv {
+    width: 10%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: rgba(255,255,255,0.5);
+    font-size: 0.9vw;
+}
+
+#MDDivType2BDMe {
+    width: 65%;
+    height: fit-content;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    border-radius: 5px;
+    border: 2px solid rgba(204,204,204,0.2);
+    background: linear-gradient(180deg, rgba(204,204,204,0.05) 0%, rgba(204,204,204,0.05) 100%);
+    gap: 0.1vw;
+}
+
+#MDDivType2BDMeTargetLine {
+    width: 0.55%;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.5);
+    position: relative;
+    display: flex;
+    padding-top: 0.45vw;
+    padding-bottom: 0.45vw;
+}
+
+#MDDivType2BDMeTextDiv {
+    width: 85%;
+    height: fit-content;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: rgba(255,255,255,0.5);
+    font-weight: 600;
+    font-size: 0.8vw;
+    padding-top: 0.65vw;
+    padding-bottom: 0.65vw;
+    font-family: "Lato", sans-serif;
+    font-style: normal;
+}
+
+/* Section 3 – Buttons container */
+#MDDivType3 {
+    gap: 0.9vw 1vw;
+    z-index: 2;
+    width: 87%;
+    height: 16%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: 2px solid rgba(255,255,255,0.1);
+}
+
+#MDDivType3TopDiv {
+    width: 90%;
+    height: 8%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#MDDivType3TopDivLeft {
+    width: 80%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    color: white;
+    gap: 0.5vw;
+}
+
+#MDDivType3TopDivLeft i {
+    color: white;
+    font-size: 1vw;
+}
+
+#MDDivType3TopDivLeft h4 {
+    font-weight: 900;
+    font-size: 1.3vw;
+    padding-top: 0.1vw;
+}
+
+#MDDivType3TopDivLeft span {
+    font-weight: 400;
+}
+
+#MDDivType3TopDivRight {
+    width: 20%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row;
+    color: white;
+    font-size: 1vw;
+    gap: 0.5vw;
+}
+
+/* Button styles */
+.MDDivType3Btn {
+    width: 42.5%;
+    height: 26%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 5.205px;
+}
+
+.MDDivType3Btn:hover {
+    transition: 200ms ease-in-out;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.MDDivType3Btn:hover .MDDivType3BtnNumber {
+    transition: 200ms ease-in-out;
+    color: #FFF;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.MDDivType3Btn:hover .MDDivType3BtnText {
+    transition: 200ms ease-in-out;
+    color: #FFF;
+}
+
+.MDDivType3BtnDefault {
+    border: 2px solid rgba(200, 200, 200, 0.2);
+    background: rgba(200, 200, 200, 0.1);
+}
+
+.MDDivType3BtnDefault .MDDivType3BtnNumber {
+    color: #CCC;
+    background: rgba(200, 200, 200, 0.2);
+}
+
+.MDDivType3BtnDefault .MDDivType3BtnText {
+    color: #CCC;
+}
+
+.MDDivType3BtnClicked {
+    color: #FFF;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.MDDivType3BtnClicked .MDDivType3BtnNumber {
+    color: #FFF;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.MDDivType3BtnClicked .MDDivType3BtnText {
+    color: #FFF;
+}
+
+.MDDivType3BtnNumber {
+    width: 15%;
+    height: 65%;
+    position: relative;
+    border-radius: 4.041px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 0.8vw;
+}
+
+.MDDivType3BtnText {
+    width: 78%;
+    height: 70%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-weight: 600;
+    font-size: 0.7vw;
+    padding-left: 0.5vw;
+}
